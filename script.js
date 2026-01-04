@@ -10,3 +10,9 @@ let user = {
 };
 
 console.log(user);
+console.log(user.name);
+
+// overwrite age 
+
+user.age = 35
+console.log(user.age)
