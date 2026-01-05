@@ -12,15 +12,26 @@ let user = {
   },
 
   logout: function () {
-    console.log('the user logged out')
+    console.log("the user logged out");
+  },
+//  using --this-- keyword
+  logBlogs: function(){
+      // console.log(this.blogs);
+      console.log('this user has written the following blogs')
+      this.blogs.forEach(blog => {
+        console.log(blog)
+      })
   }
 };
 
-user.login();
-user.logout()
+user.logBlogs()
+console.log(this)
 
-const name = "sachin";
-name.toUpperCase();
+// user.login();
+// user.logout();
+
+// const name = "sachin";
+// name.toUpperCase();
 
 // console.log(user);
 // console.log(user.name);
