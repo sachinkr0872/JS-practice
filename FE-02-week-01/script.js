@@ -1,0 +1,58 @@
+// --JS Objects (literals, methods, this)
+-
+// -- Object literals
+
+let user = {
+  name: "crystal",
+  age: 30,
+  email: "crystal@exmaple.com",
+  location: "berlin",
+  blogs: ["why mac & cheese rules", "10 things to make with marmite"],
+  //  -- method login created
+  login: function () {
+    console.log("the user logged in");
+  },
+
+  logout: function () {
+    console.log("the user logged out");
+  },
+
+  //  using --this-- keyword
+  logBlogs: function () {
+
+//--we can lalso write a functiom
+   // logBlogs(){}
+    // console.log(this.blogs);
+
+    console.log("this user has written the following blogs");
+    this.blogs.forEach((blog) => {
+      console.log(blog);
+    });
+  },
+};
+
+user.logBlogs();
+console.log(this);
+
+// user.login();
+// user.logout();
+
+// const name = "sachin";
+// name.toUpperCase();
+
+// console.log(user);
+// console.log(user.name);
+
+// overwrite-- age
+
+// user.age = 35
+// console.log(user.age);
+
+//--we can also use square brackets instead of dot notation
+// console.log(user["email"]);
+
+// user["name"] = "sachin";
+// console.log(user["name"]);
+
+//--checking the type of user
+// console.log(typeof user)
