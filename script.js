@@ -35,6 +35,10 @@ let user1 = {
 };
 user.show(); // Sachin
 
+function test() {
+  console.log(this);
+}
+test(); // window (non-strict)
 
 // user.login();
 // user.logout();
