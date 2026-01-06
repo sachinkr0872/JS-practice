@@ -27,6 +27,15 @@ let user = {
 user.logBlogs()
 console.log(this)
 
+let user1 = {
+  name: "Sachin",
+  show() {
+    console.log(this.name);
+  }
+};
+user.show(); // Sachin
+
+
 // user.login();
 // user.logout();
 
