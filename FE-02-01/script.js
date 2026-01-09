@@ -1,6 +1,29 @@
 // --------------------Object Literals----------------------//
 
-// ---------Math Object-----------
+
+// -----------Primitive values => Stores inside Stack(only target-one value change)----------------
+
+let scoreOne = 50;
+let scoreTwo = scoreOne ;
+console.log(`scoreOne: ${scoreOne}`, `scoreTwo: ${scoreTwo}`);
+
+scoreOne = 100;
+console.log(`scoreOne: ${scoreOne}`, `scoreTwo: ${scoreTwo}`);
+
+
+//-------------Reference values => Stores inside Heap with reference to stack pointers (both values change)----------------
+
+const userOne = { name: 'sachin' , age: 20 };
+const userTwo = userOne ;
+
+console.log(userOne, userTwo);
+
+userOne.age = 30;
+console.log(userOne, userTwo)
+
+
+
+// -----------Math Object-------------
 
 // console.log(Math);
 // console.log(Math.PI);
@@ -15,12 +38,12 @@
 
 
 
-// ------random numbers -------
+// ---------random numbers -------
 
-const random = Math.random();
+// const random = Math.random();
 
-console.log(random);
-console.log(Math.round(random * 100))     // --- get random numbers between 1 to 100 using -- * 100
+// console.log(random);
+// console.log(Math.round(random * 100))     // --- get random numbers between 1 to 100 using -- * 100
 
 // ---------array of object---------
 // const blogs = [
