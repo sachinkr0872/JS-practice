@@ -159,29 +159,54 @@
 
 // ----------------- Reduce Functions (used where ) -------------
 
-const arr = [5, 1, 2, 3, 6];
+// const arr = [5, 1, 2, 3, 6];
 
-// sum of max
+// ---sum of max
 
-function findMax(arr) {
-  let max = 0;
-  for (let i = 0; i < arr.length; i++) {
-    if (arr[i] > max) {
-      max = arr[i];
-    }
-  }
-  return max;
-}
+// function findMax(arr) {
+//   let max = 0;
+//   for (let i = 0; i < arr.length; i++) {
+//     if (arr[i] > max) {
+//       max = arr[i];
+//     }
+//   }
+//   return max;
+// }
 
-console.log(findMax(arr));
+// console.log(findMax(arr));
 
 
 
- const output = arr.reduce( function (max, curr) {
-      if(curr > max){
-        max = curr ;
-      }
-      return max;
- }, 0);
+//  const output = arr.reduce( function (max, curr) {
+//       if(curr > max){
+//         max = curr ;
+//       }
+//       return max;
+//  }, 0);
 
- console.log(output);
+//  console.log(output);
+
+const users = [
+    {firstName: "akshay", lastName: "saini", age: 26},
+    {firstName: "donald", lastName: "trump", age: 75},
+    {firstName: "elon", lastName: "musk", age: 50},
+    {firstName: "deepika", lastName: "padukone", age: 26},
+]
+
+//   const output = users.reduce( function (minAge, curr) {
+//      if(curr<minAge){
+//         minAge = curr
+//      }
+//      return minAge;
+//  }, 1000);
+
+//  console.log(output);
+
+ const outputlist = users.reduce((names, user) => {
+     if(user.age < 30){
+          names.push(user.firstname); //can also use names.unlist(user.firstname);
+     }
+     return names; 
+}, []);
+
+ console.log(outputlist);
