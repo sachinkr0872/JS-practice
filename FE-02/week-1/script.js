@@ -147,13 +147,41 @@
 
 // ---------------  Filter Functions ( use to filter the value inside the array) -----------
 
+// const arr = [5, 1, 2, 3, 6];
+
+// function isEven(x){
+//     return x % 2 === 0;
+// }
+// const output = arr.filter( (x) => x % 2 );     //--- easy our code by using arrow function ....
+// const output2 = arr.filter(isEven);
+
+// console.log(output, output2);
+
+// ----------------- Reduce Functions (used where ) -------------
 
 const arr = [5, 1, 2, 3, 6];
 
-function isEven(x){
-    return x % 2 === 0;
-}
-const output = arr.filter( (x) => x % 2 );     //--- easy our code by using arrow function ....
-const output2 = arr.filter(isEven);
+// sum of max
 
-console.log(output, output2);
+function findMax(arr) {
+  let max = 0;
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] > max) {
+      max = arr[i];
+    }
+  }
+  return max;
+}
+
+console.log(findMax(arr));
+
+
+
+ const output = arr.reduce( function (max, curr) {
+      if(curr > max){
+        max = curr ;
+      }
+      return max;
+ }, 0);
+
+ console.log(output);
