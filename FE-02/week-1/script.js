@@ -114,34 +114,46 @@
 //-------checking the type of user
 // console.log(typeof user)
 
-//  <<<<<<<<<<<<<<<<<<,<-----------------    Array Methods (map, filter, reduce)    ---------------------->>>>>>>>>>>>>>>>>>>>>>>
+//  <<<<<<<<<<<<<<<<<<<-----------------    Array Methods (map, filter, reduce)    ---------------------->>>>>>>>>>>>>>>>>>>>>>>
 
-// ------------ Map Functions (use to transform{get a new value of each} an array) -----------
+// ------------Map Functions (use to transform{get a new value of each} an array) -----------
+
+// const arr = [5, 1, 2, 3, 6];
+
+// function double(x) {
+//   return x * 2;
+// }
+
+// function quad(x) {
+//   return x * 4;
+// }
+
+// function triple(x) {
+//   return x * 3;
+// }
+
+// const output = arr.map(double);
+// const output4 = arr.map(quad);
+// const output2 = arr.map(triple);
+
+// //   ----------we can also write a function inside like this called a higher function also and also like this arrow function also .......
+
+// const output3 = arr.map( (x) => x.toString(2) ) ;
+//    //  const output3 = arr.map( function binary(x) {
+//   // return x.toString(2);
+//  // });
+
+// console.log(output, output2, output3, output4);
+
+// ---------------  Filter Functions ( use to filter the value inside the array) -----------
+
 
 const arr = [5, 1, 2, 3, 6];
 
-function double(x) {
-  return x * 2;
+function isEven(x){
+    return x % 2 === 0;
 }
+const output = arr.filter( (x) => x % 2 );     //--- easy our code by using arrow function ....
+const output2 = arr.filter(isEven);
 
-function quad(x) {
-  return x * 4;
-}
-
-function triple(x) {
-  return x * 3;
-}
-
-const output = arr.map(double);
-const output4 = arr.map(quad);
-const output2 = arr.map(triple);
-
-//   ----------we can also write a function inside like this called a higher function also and also like this arrow function also .......
-
-const output3 = arr.map( (x) => x.toString(2) ) ;
-// const output3 = arr.map( function binary(x) {
-//   return x.toString(2);
-
-// });
-
-console.log(output, output2, output3, output4);
+console.log(output, output2);
