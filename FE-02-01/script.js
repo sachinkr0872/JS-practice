@@ -2,19 +2,25 @@
 
 // ---------Math Object-----------
 
-console.log(Math);
-console.log(Math.PI);
-console.log(Math.E);
+// console.log(Math);
+// console.log(Math.PI);
+// console.log(Math.E);
 
-const area = 7.7;
+// const area = 7.7;
 
-console.log(Math.round(area));      // round method 
-console.log(Math.floor(area));      // floor method 
-console.log(Math.ceil(area));      // ceil method 
-console.log(Math.trunc(area));      // trunc method 
+// console.log(Math.round(area));      // ---round method 
+// console.log(Math.floor(area));      // ---floor method 
+// console.log(Math.ceil(area));      // ---ceil method 
+// console.log(Math.trunc(area));      // ---trunc method 
 
 
 
+// ------random numbers -------
+
+const random = Math.random();
+
+console.log(random);
+console.log(Math.round(random * 100))     // --- get random numbers between 1 to 100 using -- * 100
 
 // ---------array of object---------
 // const blogs = [
