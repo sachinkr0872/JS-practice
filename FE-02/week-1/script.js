@@ -124,11 +124,16 @@ function double(x) {
   return x * 2;
 }
 
+function quad(x) {
+  return x * 4;
+}
+
 function triple(x) {
   return x * 3;
 }
 
 const output = arr.map(double);
+const output4 = arr.map(quad);
 const output2 = arr.map(triple);
 
 //   ----------we can also write a function inside like this called a higher function also and also like this arrow function also .......
@@ -139,4 +144,4 @@ const output3 = arr.map( (x) => x.toString(2) ) ;
 
 // });
 
-console.log(output, output2, output3);
+console.log(output, output2, output3, output4);
