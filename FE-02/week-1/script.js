@@ -186,12 +186,12 @@
 
 //  console.log(output);
 
-const users = [
-    {firstName: "akshay", lastName: "saini", age: 26},
-    {firstName: "donald", lastName: "trump", age: 75},
-    {firstName: "elon", lastName: "musk", age: 50},
-    {firstName: "deepika", lastName: "padukone", age: 26},
-]
+// const users = [
+//     {firstName: "akshay", lastName: "saini", age: 26},
+//     {firstName: "donald", lastName: "trump", age: 75},
+//     {firstName: "elon", lastName: "musk", age: 50},
+//     {firstName: "deepika", lastName: "padukone", age: 26},
+// ]
 
 //   const output = users.reduce( function (minAge, curr) {
 //      if(curr<minAge){
@@ -202,11 +202,24 @@ const users = [
 
 //  console.log(output);
 
- const outputlist = users.reduce((names, user) => {
-     if(user.age < 30){
-          names.push(user.firstname); //can also use names.unlist(user.firstname);
-     }
-     return names; 
-}, []);
+//  const outputlist = users.reduce((names, user) => {
+//      if(user.age < 30){
+//           names.push(user.firstname);   //---can also use--  names.unlist(user.firstname);
+//      }
+//      return names; 
+// }, []);
 
- console.log(outputlist);
+//  console.log(outputlist);
+
+// -------------------------------     Hoisting (by using it we can access a variable from anaywhere in the program) in JavaScript (variables & functions)      ------------------------------------------
+
+// getName();
+// console.log(x);
+
+console.log(getName)
+var x = 7;
+
+function getName() {
+ console.log("Namaste JavaScript");
+}
+
