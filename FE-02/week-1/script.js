@@ -175,8 +175,6 @@
 
 // console.log(findMax(arr));
 
-
-
 //  const output = arr.reduce( function (max, curr) {
 //       if(curr > max){
 //         max = curr ;
@@ -206,20 +204,36 @@
 //      if(user.age < 30){
 //           names.push(user.firstname);   //---can also use--  names.unlist(user.firstname);
 //      }
-//      return names; 
+//      return names;
 // }, []);
 
 //  console.log(outputlist);
 
-// -------------------------------     Hoisting (by using it we can access a variable from anaywhere in the program) in JavaScript (variables & functions)      ------------------------------------------
+//------------   Hoisting (by using it we can access a variable from anaywhere in the program) in JavaScript (variables & functions)   -------------------------------
+
+// var x = 7;
+
+// function getName() {
+//   console.log("Namaste JavaScript");
+// }
 
 // getName();
 // console.log(x);
+// console.log(getName);
 
-console.log(getName)
-var x = 7;
+// ----------------------------  Functions - Types of Functions  ------------------------------
 
-function getName() {
- console.log("Namaste JavaScript");
+var x = 1;
+a();
+b();
+console.log(x);
+
+function a() {
+  var x = 10;
+  console.log(x);
 }
 
+function b() {
+  var x = 100;
+  console.log(x);
+}
