@@ -9,7 +9,7 @@
 // scoreOne = 100;
 // console.log(`scoreOne: ${scoreOne}`, `scoreTwo: ${scoreTwo}`);
 
-//-------------Reference values => Stores inside Heap with reference to stack pointers (both values change)----------------
+//-------------  Reference values => Stores inside Heap with reference to stack pointers (both values change)----------------
 
 // const userOne = { name: 'sachin' , age: 20 };
 // const userTwo = userOne ;
@@ -114,7 +114,7 @@
 //-------checking the type of user
 // console.log(typeof user)
 
-//  <<<<<<<<<<<<<<<<<<<-----------------    Array Methods (map, filter, reduce)    ---------------------->>>>>>>>>>>>>>>>>>>>>>>
+//  <<<<<<<<<<<<<<<<<<<---------------------------    Array Methods (map, filter, reduce)    ------------------------------>>>>>>>>>>>>>>>>>>>>>>>
 
 // ------------Map Functions (use to transform{get a new value of each} an array) -----------
 
@@ -209,7 +209,7 @@
 
 //  console.log(outputlist);
 
-//------------   Hoisting (by using it we can access a variable from anaywhere in the program) in JavaScript (variables & functions)   -------------------------------
+//---------------   Hoisting (by using it we can access a variable from anaywhere in the program) in JavaScript (variables & functions) -------------------------------
 
 // var x = 7;
 
@@ -221,7 +221,7 @@
 // console.log(x);
 // console.log(getName);
 
-// -------------------------------------    Functions - Types of Functions    -------------------------------------------
+// -------------------------------------------------    Functions - Types of Functions    ----------------------------------------------------
 
 // var x = 1;
 // a();
@@ -238,32 +238,61 @@
 //   console.log(x);
 // }
 
-
-
 // -----------------------------------------------   Object Manipulation   ---------------------------------------------------------
 
-const myObject = {
-  a: "Sachin",
-  b: 1,
-  c: false,
-};
+// const myObject = {
+//   a: "Sachin",
+//   b: 1,
+//   c: false,
+// };
 // console.log(myObject);
 
+// ------- Object keys (change var name into array ) -------
 
-// -----   Object keys (change var name into array )------
+// Object.keys(myObject).forEach((i) => {
+//   console.log(myObject[i]);
+// });
 
-Object.keys(myObject).forEach((i) => {
-  console.log(myObject[i]);
-}); 
+//----- Object values (change the var data into array ) -------
+
+// let values = Object.values(myObject);
+// console.log(values);
+
+//-------  Object entries (poori line array me change) -------
+
+// let entries = Object.entries(myObject);
+// console.log(entries[2][1]);
+
+// ------------------------------------------- Async JS (Asynchronous js overview) - Callbacks, Promises, Async Await   --------------------------------------------------------
 
 
-// ------ Object values (change the var data into array )--------
 
-let values = Object.values(myObject);
-console.log(values);
+// ----------------------  Callbacks    -------------------
 
 
-// ------------  Object entries (poori line array me change)  ------------
+const posts = [
+  { title: "Post One", body: "This is post one" },
+  { title: "Post Two", body: "This is post two" },
+];
 
-let entries = Object.entries(myObject);
-console.log(entries[2][1]);
+function getPosts() {
+  setTimeout(() => {
+    let output = "";
+    posts.forEach ( (post, index) => {
+      output += `<li>${post.title}</li>`;
+    });
+    document.body.innerHTML = output;
+  }, 1000);
+}
+
+function createPost (post, callback) {
+  setTimeout(() => {
+    posts.push(post);
+    callback()
+  }, 2000);
+}
+
+createPost({ title: "Post Three", body: "This is post three" }, getPosts);
+
+
+
