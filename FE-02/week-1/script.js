@@ -238,17 +238,32 @@
 //   console.log(x);
 // }
 
+
+
 // -----------------------------------------------   Object Manipulation   ---------------------------------------------------------
 
-
 const myObject = {
-    a: 'Sachin',
-    b: 1,
-    c: false
-}
+  a: "Sachin",
+  b: 1,
+  c: false,
+};
+// console.log(myObject);
 
-// -----Object keys -----
+
+// -----   Object keys (change var name into array )------
 
 Object.keys(myObject).forEach((i) => {
-    console.log(myObject[i])
-})
+  console.log(myObject[i]);
+}); 
+
+
+// ------ Object values (change the var data into array )--------
+
+let values = Object.values(myObject);
+console.log(values);
+
+
+// ------------  Object entries (poori line array me change)  ------------
+
+let entries = Object.entries(myObject);
+console.log(entries[2][1]);
