@@ -263,8 +263,6 @@
 // let entries = Object.entries(myObject);
 // console.log(entries[2][1]);
 
-
-
 // -------------------------    Async JS (Asynchronous js overview) - Callbacks, Promises, Async Await ----------------------------------------------
 
 // ----------------------  Callbacks    -------------------
@@ -292,7 +290,6 @@
 // }
 
 // createPost({ title: "Post Three", body: "This is post three" }, getPosts);
-
 
 // -----------------   Promises  -------------------
 
@@ -329,7 +326,6 @@
 
 // createPost({ title: "Post Three", body: "This is post three" }).then(getPosts).catch(err => console.log(err))
 
-
 //-------------------------- Async / Await  -------------------------------
 
 // async function init() {
@@ -339,7 +335,6 @@
 // }
 
 // init();
-
 
 // ------------  Async / Await / Fetch --------------
 
@@ -353,7 +348,6 @@
 
 // fetchUsers();
 
-
 // -------Promise.all-------
 
 // const promise1 = Promise.resolve("Hello World");
@@ -366,14 +360,42 @@
 
 //   Promise.all([promise1, promise2, promise3, promise4]).then(values => console.log(values));
 
-
-
-
-
-
 //--------------------------------------------------------    Fetch API (application programming interface)    ------------------------------------------------------------------
 
+// document.getElementById("getText").addEventListener("click", getText);
+// document.getElementById("getUsers").addEventListener("click", getUsers);
 
+// function getText() {
+//   //   fetch('sample.txt')
+//   //   .then(function(res){
+//   //    return res.text();
+//   //   })
+//   //   .then(function(data){
+//   //         console.log(data);
+//   //   })
 
+//   fetch("sample.txt")
+//     .then((res) => res.text())
+//     .then((data) => {
+//       document.getElementById("output").innerHTML = data;
+//     })
+//     .catch((err) => console.log(err));
+// }
 
-
+// function getUsers() {
+//   fetch("users.json")
+//     .then((res) => res.json())
+//     .then((data) => {
+//       let output = "<h1>Users</h1>";
+//       data.forEach(function (user) {
+//         output += `
+//         <ul>
+//             <li>ID: ${user.id}</li>
+//             <li>Name: ${user.name}</li>
+//             <li>Email: ${user.email}</li>
+//         </ul>
+//         `;
+//       });
+//       document.getElementById('output').innerHTML = output;
+//     });
+// }
