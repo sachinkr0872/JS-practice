@@ -16,7 +16,13 @@
 
 //----------- Authentication--------Some API's require Authentication to use their service . This could be free or paid.
 
-// curl-H"Authentication:token OAUTH-TOKEN" https://api.github.com
-// curl https://api.github.com/?access_token=OAUTH-TOKEN
-// curl 'https://api.github.com/users/whatever?client_id=xxxx&client_secret=yyy'
+// curl-H"Authentication:token OAUTH-TOKEN" https://api.github.com   (through header)
+// curl https://api.github.com/?access_token=OAUTH-TOKEN   (through parameter)
+// curl 'https://api.github.com/users/whatever?client_id=xxxx&client_secret=yyy'  
                   
+
+
+
+
+
+
