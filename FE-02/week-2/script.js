@@ -5,7 +5,8 @@
 
 
 
-// Endpoints  --- GET (https://mysite.com/api/users) gives users data
+// Endpoints - The URI/URL where api/service can be accessed by a client application
+//             --- GET (https://mysite.com/api/users) gives users data
 //            --- GET (https://mysite.com/api/users/1 or users/details/1) gives users details with id
 //            --- POST (https://mysite.com/api/users) add users to the server or the database
 //            --- PUT (https://mysite.com/api/users/1 or users/update/1) update the user data
