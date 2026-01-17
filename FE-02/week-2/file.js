@@ -33,30 +33,15 @@ const fs = require("fs");
 //     }
 // });
 
-
 // fs.appendFileSync('./test.txt', new Date().getDate().toLocaleString())
 
 //  fs.appendFileSync('./test.txt', 'Hey sachin');
 
-
-
 // fs.appendFileSync("./test.txt", `${Date.now()} Hey sachin\n`)
-
 
 // fs.cpSync("./test.txt", "./copy.txt")
 
-fs.unlinkSync("./copy.txt")
-
-
-
-
-
-
-
-
-
-
+// fs.unlinkSync("./copy.txt")
+console.log(fs.statSync("./test.txt"));
 
 //  git add FE-02/week-2/file.js
-
-
