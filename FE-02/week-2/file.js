@@ -43,9 +43,9 @@ const fs = require("fs");
 // fs.appendFileSync("./test.txt", `${Date.now()} Hey sachin\n`)
 
 
-fs.cpSync("./test.txt", "./copy.txt")
+// fs.cpSync("./test.txt", "./copy.txt")
 
-
+fs.unlinkSync("./copy.txt")
 
 
 
