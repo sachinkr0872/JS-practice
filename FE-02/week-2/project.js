@@ -6,3 +6,7 @@ const sortedBySalary = [...employees].sort((a, b) => {
     b.salary - a.salary
 })
 
+const experiencedEmployees = sortedBySalary.filter(emp => {
+    return emp.experience >= 3
+})
+
