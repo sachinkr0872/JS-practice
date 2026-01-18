@@ -44,4 +44,6 @@ const fs = require("fs");
 // fs.unlinkSync("./copy.txt")
 console.log(fs.statSync("./test.txt"));
 
+fs.mkdirSync('my-docs')
+
 //  git add FE-02/week-2/file.js

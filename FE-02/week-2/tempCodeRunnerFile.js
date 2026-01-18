@@ -1,12 +1,3 @@
-const fs = require("fs");
-// const path = require("path");
+xt', new Date().getDate().toLocaleString())
 
-// const filePath = path.join(__dirname, "test.txt");
-
-// fs.appendFile(filePath, "Hello bhai\n", (err) => {
-//     if (err) {
-//         console.log(err);
-//     } else {
-//         console.log("Data appended successfully");
-//     }
-// });
+//  fs.appendFileSync('./test.t
