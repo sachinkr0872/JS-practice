@@ -21,3 +21,11 @@ const totalSalaryExpenditure = experiencedEmployees.reduce((total, emp) => {
     total = total + emp.salary
     return total
 }, 0)
+
+console.log(`1️⃣   Sorted Employees (by salary descending): `)
+console.table(sortedBySalary)
+
+console.log(`\n 2️⃣   Summary List (Experienced Emmployees): `)
+console.table(summary)
+
+console.log(`\n 3️⃣   Total Salary Expenditure: ${totalSalaryExpenditure} `)
