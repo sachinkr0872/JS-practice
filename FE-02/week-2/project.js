@@ -17,3 +17,7 @@ const summary = experiencedEmployees.map((emp) => ({
 }));
 
 
+const totalSalaryExpenditure = experiencedEmployees.reduce((total, emp) => {
+    total = total + emp.salary
+    return total
+}, 0)
