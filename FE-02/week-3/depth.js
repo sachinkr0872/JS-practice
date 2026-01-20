@@ -13,4 +13,11 @@
 
 // ------------------------- How JS Code is Executed ---------------------------------
 
-// 1 phase - Memory Creation  
+// 1st phase -- Memory Creation  (gives "undefined" keyword to the variables)
+// 2nd phase --  Code Execution ()
+
+// -----------  Call Stack --------------
+// diffrent names of call stack are : 1. Execution context stack , 2. Program stack , 3. Control stack , 4. Runtime stack , 5. Machine stack
+
+// global exexcution context is goes into the stack 
+// Call Stack maintains the order of execution of execution contexts
