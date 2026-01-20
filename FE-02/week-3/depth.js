@@ -9,3 +9,8 @@
 
 
 // JavaScript is a synchronous single-threaded language (execute one command at a time and in a specific order one the first line ended then goes to other )
+
+
+// ------------------------- How JS Code is Executed ---------------------------------
+
+// 1 phase - Memory Creation  
