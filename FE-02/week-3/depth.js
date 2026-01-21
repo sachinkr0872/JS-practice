@@ -21,3 +21,20 @@
 
 // global exexcution context is goes into the stack 
 // Call Stack maintains the order of execution of execution contexts
+
+
+
+
+// ---------------------------  HOISTING in JS (variables and functions)-------------------------------
+
+// hoisting - we can access the variables and function even before we initialized it 
+
+getName()
+console.log(x)
+
+var x = 7;
+
+function getName(){
+    console.log("Namaste JavaScript")
+}
+
