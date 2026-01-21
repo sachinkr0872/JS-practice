@@ -1,5 +1,4 @@
-// {1} --------- HOW JS works ------------- 
-
+// {1} --------- HOW JS works -------------
 
 // --------- Execution Context --------
 
@@ -7,9 +6,7 @@
 
 // 2nd component - Code or Thread of Execution (code executed one line at a time )
 
-
 // JavaScript is a synchronous single-threaded language (execute one command at a time and in a specific order one the first line ended then goes to other )
-
 
 // ------------------------- How JS Code is Executed ---------------------------------
 
@@ -19,22 +16,35 @@
 // -----------  Call Stack --------------
 // diffrent names of call stack are : 1. Execution context stack , 2. Program stack , 3. Control stack , 4. Runtime stack , 5. Machine stack
 
-// global exexcution context is goes into the stack 
+// global exexcution context is goes into the stack
 // Call Stack maintains the order of execution of execution contexts
-
-
-
 
 // ---------------------------  HOISTING in JS (variables and functions)-------------------------------
 
-// hoisting - we can access the variables and function even before we initialized it 
+// hoisting - we can access the variables and function even before we initialized it
 
-getName()
-console.log(x)
+// getName();
+// console.log(x);
 
-var x = 7;
+// var x = 7;
 
-function getName(){
-    console.log("Namaste JavaScript")
+// function getName() {
+//   console.log("Namaste JavaScript");
+// }
+
+// ----------------------------- Functions in JS and Variable environment  ----------------------------------
+
+var x = 1;
+a();
+b();
+console.log(x);
+
+function a() {
+  var x = 10;
+  console.log(x);
 }
 
+function b() {
+  var x = 100;
+  console.log(x);
+}
