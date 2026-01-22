@@ -70,6 +70,17 @@
 
 // -----------------------------------  Undefined and Not Defined in JS ------------------------------------------------------------
 
-var a = 7; // this is undefined because it allocates memory for "a"
+// var a = 7; // this is undefined because it allocates memory for "a"
 
-console.log(x); // this is called not defined because x is not allocated memory 
+// console.log(x); // this is called not defined because x is not allocated memory
+
+// ---------------------- JS is a Losely or weekly typed(more stronger BTW) language -------------------
+
+var a;
+console.log(a);
+
+a = 10;
+console.log(a);
+
+a = "hello sachin";
+console.log(a);
