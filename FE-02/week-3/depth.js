@@ -59,11 +59,13 @@
 
 // ---------------------------------  SHORTEST JS program (window & this keyword)   ------------------------------------------------
 
-var a = 10;  //  which is on the top is in global space and if something is under a function is not in the global space
+var a = 10;  
+var b= 100//  which is on the top is in global space and if something is under a function is not in the global space
 function b() {
   var x = 10
 }
 
 console.log(window.a)
 console.log(a)
+console.log(b)
 console.log(this.a)
