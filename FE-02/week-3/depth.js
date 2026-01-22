@@ -34,23 +34,36 @@
 
 // ----------------------------- Functions in JS and Variable environment  ----------------------------------
 
-var x = 1;
-a();
-b();
-c()
-console.log(x);
+// var x = 1;
+// a();
+// b();
+// c()
+// console.log(x);
 
-function a() {
-  var x = 10;
-  console.log(x);
-}
+// function a() {
+//   var x = 10;
+//   console.log(x);
+// }
 
+// function b() {
+//   var x = 100;
+//   console.log(x);
+// }
+
+// function c() {
+//   var x = 101;
+//   console.log(x);
+// }
+
+
+
+// ---------------------------------  SHORTEST JS program (window & this keyword)   ------------------------------------------------
+
+var a = 10;  //  which is on the top is in global space and if something is under a function is not in the global space
 function b() {
-  var x = 100;
-  console.log(x);
+  var x = 10
 }
 
-function c() {
-  var x = 101;
-  console.log(x);
-}
+console.log(window.a)
+console.log(a)
+console.log(this.a)
