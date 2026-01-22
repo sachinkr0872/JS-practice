@@ -55,17 +55,21 @@
 //   console.log(x);
 // }
 
-
-
 // ---------------------------------  SHORTEST JS program (window & this keyword)   ------------------------------------------------
 
-var a = 10;  
-var b= 100//  which is on the top is in global space and if something is under a function is not in the global space
-function b() {
-  var x = 10
-}
+// var a = 10;
+// var b= 100//  which is on the top is in global space and if something is under a function is not in the global space
+// function b() {
+//   var x = 10
+// }
 
-console.log(window.a)
-console.log(a)
-console.log(b)
-console.log(this.a)
+// console.log(window.a)
+// console.log(a)
+// console.log(b)
+// console.log(this.a)
+
+// -----------------------------------  Undefined and Not Defined in JS ------------------------------------------------------------
+
+var a = 7; // this is undefined because it allocates memory for "a"
+
+console.log(x); // this is called not defined because x is not allocated memory 
