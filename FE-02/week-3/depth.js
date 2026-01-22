@@ -37,6 +37,7 @@
 var x = 1;
 a();
 b();
+c()
 console.log(x);
 
 function a() {
@@ -46,5 +47,10 @@ function a() {
 
 function b() {
   var x = 100;
+  console.log(x);
+}
+
+function c() {
+  var x = 101;
   console.log(x);
 }
