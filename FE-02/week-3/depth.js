@@ -89,13 +89,23 @@
 
 // --------- scope and lexical environment(in sequence like c() is lexical inside a()) ---------
 
-function a() {
-  var b = 10;
-  c();
-  function c() {
-  // console.log(b)
-  }
-}
+// function a() {
+//   var b = 10;
+//   c();
+//   function c() {
+//   // console.log(b)
+//   }
+// }
 
-a();
-console.log(b);
+// a();
+// console.log(b);
+
+// -------------------------------------   let & const in JS ----------------------------------------
+
+// let and const declarations are hoisted
+
+// Temopral deadzone -- That face from hoisting till initialized with some value
+
+let a = 10;
+console.log(a);
+var b = 100;
