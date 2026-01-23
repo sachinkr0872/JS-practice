@@ -76,11 +76,26 @@
 
 // ---------------------- JS is a Losely or weekly typed(more stronger BTW) language -------------------
 
-var a;
-console.log(a);
+// var a;
+// console.log(a);
 
-a = 10;
-console.log(a);
+// a = 10;
+// console.log(a);
 
-a = "hello sachin";
-console.log(a);
+// a = "hello sachin";
+// console.log(a);
+
+// ----------------------------------    The Scope Chain -------------------------------------
+
+// --------- scope and lexical environment(in sequence like c() is lexical inside a()) ---------
+
+function a() {
+  var b = 10;
+  c();
+  function c() {
+  // console.log(b)
+  }
+}
+
+a();
+console.log(b);
