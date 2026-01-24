@@ -141,14 +141,29 @@
 
 //---- Block scope----
 
-{
-  var a = 10; // global scope
-  let b = 20; // block scope - not accesible outside block
-  const c = 30; // block scope
+// {
+  // var a = 10;   // global scope
+  // let b = 20;   // block scope - not accesible outside block
+//   const c = 30;   // block scope
+//   console.log(a);
+//   console.log(b);
+//   console.log(c);
+// }
+// console.log(a);
+// console.log(b);
+// console.log(c);
+
+
+// -----------------  Shadowing in JS --------------------
+
+
+var a = 100;
+ {
+   var a = 10;  // this a is shadowed the other var a = 100 and also modified the 100 to 10
+   let b = 20;   
+  const c = 30;  
+
   console.log(a);
   console.log(b);
   console.log(c);
 }
-console.log(a);
-console.log(b);
-console.log(c);
