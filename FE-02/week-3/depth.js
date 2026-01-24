@@ -180,7 +180,18 @@
 
 // ----------------- Illegal shadowing------------------
 
-let a = 20;
+// let a = 20;
+// {
+//   var a = 20;
+// }
+
+// ---------- - Lexical scope --------------- 
+
+const a = 10;
 {
-  var a = 20;
+  const a = 100;
+  {
+const a = 200;
+console.log(a); //prints nearest a in the scope
+  }
 }
