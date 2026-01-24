@@ -104,7 +104,7 @@
 
 // let and const declarations are hoisted
 
-// Temopral deadzone -- That face from hoisting till initialized with some value
+// --------------------------Temopral deadzone -------- That face from hoisting till initialized with some value // -- console.log(a);  let a = 100;
 
 // let a = 10;   // let-- is a strict variable we cant use same var name in same scope
 // let a =20;   // cant use the same variable name again in -- let
@@ -123,14 +123,24 @@
 // console.log(c)
 
 
-// ------------- three types of error 
+// ---------------------- three types of error ----------------------------
 
   //  1. Syntax error  // ex- const b; -- missing syntax   or let a = 20; let a =30;  -- same var_name
 
   //  2. Type error  // ex - const b =100;  b= 1000;
 
-  //  3. Reference error  // ex - console.log(a);  let a = 200; -- cant access a before initialization  or  console.log(x);  -- x is not defined
+  //  3. Reference error  // ex - console.log(a);  let a = 200; -- called Temopral deadzone -- cant access a before initialization  or  console.log(x);  -- x is not defined
 
 
 
+// ----------------------------------  Block Scope and Shadowing in JS----------------------------------------
 
+// Block or Compound statement is defined by these  curly braces{}
+
+
+
+if (true) {
+    //compound statement -- group one or more statements
+  var a = 10;
+  console.log(a);
+}
