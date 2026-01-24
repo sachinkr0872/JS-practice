@@ -106,6 +106,18 @@
 
 // Temopral deadzone -- That face from hoisting till initialized with some value
 
-let a = 10;
+let a = 10;   // let-- is a strict variable we cant use same var name in same scope
+// let a =20;   // cant use the same variable name again in -- let
+
 console.log(a);
-var b = 100;
+
+var b = 100;  // not strict we can use same var name in the same scope
+
+
+//  ---- const --is strict like let but one more thing is we cant  initialize a var after  declaration
+
+const c = 1000;  // like this 
+// const c;
+// c= 2000;      // not like this 
+
+console.log(c)
