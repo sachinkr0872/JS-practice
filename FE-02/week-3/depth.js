@@ -113,34 +113,42 @@
 
 // var b = 100;  // not strict we can use same var name in the same scope
 
-
 //  ---- const --is strict like let but one more thing is we cant  initialize a var after  declaration
 
-// const c = 1000;  // like this 
+// const c = 1000;  // like this
 // const c;
-// c= 2000;      // not like this 
+// c= 2000;      // not like this
 
 // console.log(c)
 
-
 // ---------------------- three types of error ----------------------------
 
-  //  1. Syntax error  // ex- const b; -- missing syntax   or let a = 20; let a =30;  -- same var_name
+//  1. Syntax error  // ex- const b; -- missing syntax   or let a = 20; let a =30;  -- same var_name
 
-  //  2. Type error  // ex - const b =100;  b= 1000;
+//  2. Type error  // ex - const b =100;  b= 1000;
 
-  //  3. Reference error  // ex - console.log(a);  let a = 200; -- called Temopral deadzone -- cant access a before initialization  or  console.log(x);  -- x is not defined
-
-
+//  3. Reference error  // ex - console.log(a);  let a = 200; -- called Temopral deadzone -- cant access a before initialization  or  console.log(x);  -- x is not defined
 
 // ----------------------------------  Block Scope and Shadowing in JS----------------------------------------
 
 // Block or Compound statement is defined by these  curly braces{}
 
+// if (true) {
+//compound statement -- group one or more statements
+//   var a = 10;
+//   console.log(a);
+// }
 
+//---- Block scope----
 
-if (true) {
-    //compound statement -- group one or more statements
-  var a = 10;
+{
+  var a = 10; // global scope
+  let b = 20; // block scope - not accesible outside block
+  const c = 30; // block scope
   console.log(a);
+  console.log(b);
+  console.log(c);
 }
+console.log(a);
+console.log(b);
+console.log(c);
