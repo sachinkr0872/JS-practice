@@ -170,10 +170,17 @@
 // console.log(b);
 
 
-const c = 100;
-function x() {
-  const c = 30;
-  console.log(c);
+// const c = 100;
+// function x() {
+//   const c = 30;
+//   console.log(c);
+// }
+// x();
+// console.log(c);
+
+// ----------------- Illegal shadowing------------------
+
+let a = 20;
+{
+  var a = 20;
 }
-x();
-console.log(c);
