@@ -156,14 +156,24 @@
 
 // -----------------  Shadowing in JS --------------------
 
+// let b= 100;   //  Script scope -- separate memory space
+//  {
+//    var a = 10;  // this a is shadowed the other var a = 100 and also modified the 100 to 10
+//    let b = 20; // shadowing another let outside the block  
+//   const c = 30;  // same with const  
 
-var a = 100;
- {
-   var a = 10;  // this a is shadowed the other var a = 100 and also modified the 100 to 10
-   let b = 20;   
-  const c = 30;  
+//   console.log(a);
+//   console.log(b);
+//   console.log(c);
+// }
 
-  console.log(a);
-  console.log(b);
+// console.log(b);
+
+
+const c = 100;
+function x() {
+  const c = 30;
   console.log(c);
 }
+x();
+console.log(c);
