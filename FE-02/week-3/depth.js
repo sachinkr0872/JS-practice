@@ -187,11 +187,11 @@
 
 // ---------- - Lexical scope --------------- 
 
-const a = 10;
-{
-  const a = 100;
-  {
-const a = 200;
-console.log(a); //prints nearest a in the scope
-  }
-}
+// const a = 10;
+// {
+//   const a = 100;
+//   {
+// const a = 200;
+// console.log(a); //prints nearest a in the scope
+//   }
+// }
