@@ -16,3 +16,8 @@ const transactions = lines.slice(1).map(line => {
   });
   return obj;
 });
+
+// ----------- Sort by Date ----------------
+transactions.sort((a, b) => {
+  return new Date(a.Date) - new Date(b.Date);
+});
