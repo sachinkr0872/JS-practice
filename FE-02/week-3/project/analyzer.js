@@ -21,3 +21,40 @@ const transactions = lines.slice(1).map(line => {
 transactions.sort((a, b) => {
   return new Date(a.Date) - new Date(b.Date);
 });
+
+
+// -------------- Analysis --------------------
+
+const summaryMap = {};
+
+transactions.forEach(txn => {
+  const name = txn.AccountHolder;
+  const amount = Number(txn.Amount);
+  const type = txn.Type;
+  const remarks = txn.Remarks;
+  const txnId = txn.TransactionID;
+
+  if (!summaryMap[name]) {
+    summaryMap[name] = {
+      AccountHolder: name,
+      TotalCredit: 0,
+      TotalDebit: 0,
+      LargestTransaction: 0,
+      SalaryTransactions: []
+    };
+  }
+
+  if (type === "Credit") {
+    summaryMap[name].TotalCredit += amount;
+  } else if (type === "Debit") {
+    summaryMap[name].TotalDebit += amount;
+  }
+
+  if (Math.abs(amount) > Math.abs(summaryMap[name].LargestTransaction)) {
+    summaryMap[name].LargestTransaction = amount;
+  }
+
+  if (remarks.toLowerCase().includes("salary")) {
+    summaryMap[name].SalaryTransactions.push(txnId);
+  }
+});
