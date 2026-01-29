@@ -66,3 +66,25 @@ const summaryArray = Object.values(summaryMap);
 console.log("\n📊 SUMMARY DATA:\n");
 console.log(summaryArray);
 
+// ------ now converting summary into CSV--------- 
+
+const csvHeaders = [
+  "AccountHolder",
+  "TotalCredit",
+  "TotalDebit",
+  "LargestTransaction",
+  "SalaryTransactions"
+];
+
+let csvContent = csvHeaders.join(",") + "\n";
+
+summaryArray.forEach(item => {
+  csvContent += [
+    item.AccountHolder,
+    item.TotalCredit,
+    item.TotalDebit,
+    item.LargestTransaction,
+    item.SalaryTransactions.join("|")
+  ].join(",") + "\n";
+});
+
