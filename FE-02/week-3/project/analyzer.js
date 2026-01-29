@@ -58,3 +58,11 @@ transactions.forEach(txn => {
     summaryMap[name].SalaryTransactions.push(txnId);
   }
 });
+
+
+//----------- summarize data ----------
+const summaryArray = Object.values(summaryMap);
+
+console.log("\n📊 SUMMARY DATA:\n");
+console.log(summaryArray);
+
