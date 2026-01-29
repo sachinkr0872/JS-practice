@@ -88,3 +88,8 @@ summaryArray.forEach(item => {
   ].join(",") + "\n";
 });
 
+
+// ------- save file ------------
+fs.writeFileSync("bank_summary.csv", csvContent, "utf-8");
+
+console.log("\n✅ bank_summary.csv generated successfully!");
