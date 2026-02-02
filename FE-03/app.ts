@@ -1,11 +1,10 @@
-// greeting.ts
+// Type Definations and Axios in Typescript
 
-let name: string = "Sachin";
-let age: number = 21;
-let isStudent: boolean = true;
+// Axios -- web request library as like we use fetch
 
-function greet(userName: string): string {
-  return `Hello Bhai, ${userName}!`;
-}
+import axios from "axios";
 
-console.log(greet(name));
+axios.get("https://example.com/data")
+.then((response) => {
+  console.log(response.data);
+});
