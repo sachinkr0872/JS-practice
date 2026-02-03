@@ -12,12 +12,13 @@ const fetchData = async () => {
         "https://jsonplaceholder.typicode.com/todos/1"
       );
 
+      
       if(!response.ok) {
             throw new Error(`HTTP error ${response.status}`);
 
       }
         const data: Todo = await response.json()
-        
+
    } catch (error: any) {
 
      }
