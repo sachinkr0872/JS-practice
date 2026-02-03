@@ -2,7 +2,10 @@
 
 // Axios -- web request library as like we use fetch
 
-import axios, {AxiosResponse} from "axios";
+import axios //{ AxiosResponse } 
+ from "axios";  /// this shows functionality
+
+ import type{ AxiosResponse } from "axios"; // or we do like this // this shows the type of axios
 
 //first we have to create an interface and define the types of each data and this is very useful in overall journey of TS
 interface Todo {
@@ -31,3 +34,9 @@ const fetchData = async () => {
 
    }
 }
+
+//   npm i some-library  --- to install some library 
+
+//  npm i -D @types/some-library
+
+// .d.ts 
