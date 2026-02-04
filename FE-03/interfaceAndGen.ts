@@ -78,6 +78,8 @@ interface C extends A , B {}
 
 // Its a template like interface and make the code reusable an denoted by <> 
 
+// generics used for making libraries and frameworks
+
 // simple code for understand generics ----
 
 // function func_name <> () [] {}
@@ -98,6 +100,27 @@ pair( " masala", 20)
 pair( " masala", {flavor: "Ginger"})     
 
 
-// generics me types and interfaces dono bante h 
+// generics me generics types and generics interfaces dono bante h 
 
 
+// ------Generic Interfaces---------
+
+
+interface Box<T> {
+    content: T
+}
+
+const numberBox: Box<number> = {content: 10}
+const numberBox1: Box<string> = {content: "10"}
+
+// Real world usecase of Generics are : 1. API responses,  2. Form states of React
+
+interface ApiPromise<T> {
+   status: number,
+   data: T
+}
+
+const res: ApiPromise<{flavor: string}> = {
+    status: 200,
+    data: {flavor: "masala"}
+}
