@@ -54,10 +54,10 @@ const ratings: ChaiRatings = {
 
 // ------ Imp--  Merging of interfaces----------
 
-interface User{
+interface User {
     name: string
 }
-interface User{
+interface User {
      age: number
 }
 
@@ -65,4 +65,39 @@ const u: User = {
     name : "Sachin",
     age : 23
 }
+
+//-------------  Extending Interfaces------------------
+
+interface A { a: string}
+interface B { a: string}
+
+interface C extends A , B {}  
+
+
+//--------------------------  GENERICS <> ------------------------------
+
+// Its a template like interface and make the code reusable an denoted by <> 
+
+// simple code for understand generics ----
+
+// function func_name <> () [] {}
+
+function wrapInArray <T>(item: T) : T[] {
+    return [item]
+}
+
+wrapInArray("Coffee")
+wrapInArray(23)
+wrapInArray({ flavour : "Ginger"})
+
+function pair<A, B>(a: A, b: B): [A, B] {
+    return [a,b]
+}
+
+pair( " masala", 20)     
+pair( " masala", {flavor: "Ginger"})     
+
+
+// generics me types and interfaces dono bante h 
+
 
