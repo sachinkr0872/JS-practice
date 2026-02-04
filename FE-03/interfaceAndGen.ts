@@ -51,3 +51,18 @@ const ratings: ChaiRatings = {
     masala : 4.5,
     ginger : 4.5
 } 
+
+// ------ Imp--  Merging of interfaces----------
+
+interface User{
+    name: string
+}
+interface User{
+     age: number
+}
+
+const u: User = {
+    name : "Sachin",
+    age : 23
+}
+
