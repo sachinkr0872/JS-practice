@@ -36,3 +36,41 @@ chaiTuple: ["Masala", 20];
 let userInfo: [string, number, boolean?];
 userInfo: ["Sachin", 10000000];
 userInfo: ["Sachin", 10000000, true];
+
+//----------  Read only tuples
+
+const location: readonly [number, number] = [14.56, 23.44]
+
+//-----------  Named Tuple
+
+const chaiItems: [name: string, price: number] = ["Masala", 25]
+
+
+// ------------------- Enums(restrict choices of users ) ----------------
+
+enum CupSize {
+  SMALL,
+  MEDIUM, 
+  LARGE
+}
+
+const size = CupSize.LARGE
+
+// Enum auto-increment 
+
+enum Status {
+  PENDING = 100,
+  SERVED,  // 101
+  CANCELLED  // 102
+}
+
+enum ChaiType {
+  MASALA = " masala",
+  GINGER = " ginger"
+}
+
+function makeChai(type: ChaiType) {
+  console.log( `Making: ${type}`);
+}
+
+makeChai(ChaiType.GINGER)
