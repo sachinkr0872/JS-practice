@@ -74,3 +74,19 @@ function makeChai(type: ChaiType) {
 }
 
 makeChai(ChaiType.GINGER)
+
+enum RandomEnum {
+  ID = 1,
+  NAME = "Chai"
+}
+
+const enum Sugars {
+  LOW = 1,
+  MEDIUM = 2,
+  HIGH = 3
+}
+
+// const s = Sugars.HIGH
+
+let t: [string, number ] = ["chai", 2]
+t.push("extra")
