@@ -100,3 +100,16 @@ class MyChai extends Drink {
     console.log("Brewing Chai");
   }
 }
+
+// ---- Composition ----------
+class Heater {
+    heat(){}
+}
+
+class ChaiMaker{
+    constructor(private heater: Heater){}
+
+    make(){
+        this.heater.heat
+    }
+}
