@@ -71,7 +71,7 @@ type Order = {
   address: Address;
 };
 
-// define a data type in one but use multiple places in object  --------- partial data type 
+// define a data type in one but use multiple places in object  --------- partial data type
 
 type Chaii = {
   name: string;
@@ -90,16 +90,41 @@ updateChai({});
 // Required data type
 
 type ChaiOrder = {
-    name?: string;
-    quantity?: number
-}
+  name?: string;
+  quantity?: number;
+};
 
 const placeOrder = (order: Required<ChaiOrder>) => {
-    console.log(order);
-}
+  console.log(order);
+};
 
-placeOrder( { 
-    name: " Masala Chai",
-    quantity : 2
-})
+placeOrder({
+  name: " Masala Chai",
+  quantity: 2,
+});
 
+// Pick Data Type
+
+type Chai2 = {
+  name: string;
+  price: number;
+  isHot: boolean;
+  ingredients: string[];
+};
+
+type BasicChaiInfo = Pick<Chai2, "name" | "price">;
+const ChaiInfo: BasicChaiInfo = {
+  name: "Lemon Tea",
+  price: 10,
+};
+
+// Omit -- less used in production
+
+type ChaiNew = {
+  name: string;
+  price: number;
+  isHot: boolean;
+ secretIngredients: string;
+};
+
+type PublicChai = Omit<Chai, "secretIngredients">;
