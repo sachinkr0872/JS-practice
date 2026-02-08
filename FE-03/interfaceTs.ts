@@ -38,10 +38,46 @@ class Chai implements CupSize {
 //   ok: boolean = true;
 // }
 
-// ---------- Union Type -------
+// ---------- Union(Literal) Type -------
 
 type TeaType = "masala" | "ginger" | "lemon"
 
 function orderChai(t: TeaType){
     console.log(t)
 }
+
+// ------ Intersection Type ------
+
+type BaseChai = {teaLeaves: number }
+type Extra = { masala: number}
+
+type MasalaChai1 = BaseChai & Extra
+
+const cup: MasalaChai1 = {
+    teaLeaves: 2,
+    masala: 1
+}
+
+// Optional Values
+
+type User = {
+    username: string;
+    bio?: string
+}
+
+const u1: User = {username: "Sachin"}
+const u2: User = {username: "Sachin", bio: "Engineer"}
+
+// ReadOnly values
+
+type Config = {
+    readonly appName: string;
+    version: number
+}
+
+const cfg: Config = {
+   appName: "MasterJi",
+   version: 2.0
+}
+
+// cfg.appName = "ChaiCode"   // can't changeable
