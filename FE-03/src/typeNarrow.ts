@@ -16,3 +16,34 @@ function serveChai(msg?: string) {
   }
   return `Serving default Masala chai`;
 }
+
+// Put Exhaustive checks
+
+function orderChai(size: "small" | "medium" | "large" | number) {
+  if (size === "small") {
+    return `small cutting chai...`;
+  }
+  if (size === "medium" || size === "large") {
+    return `make extra chai`;
+  }
+  return `chai order #${size}`;
+}
+
+class kulhadChai {
+  serve() {
+    return ` Serving kulhad chai`;
+  }
+}
+class cutting {
+  serve() {
+    return ` Serving cutting chai`;
+  }
+}
+
+// safe guards
+
+function serve(chai: kulhadChai | cutting) {
+  if (chai instanceof kulhadChai) {
+    return chai.serve();
+  }
+}
